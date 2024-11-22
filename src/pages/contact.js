@@ -63,7 +63,7 @@ const Contact = () => {
 				onSubmit={handleSubmit}
 			>
 				<Form className="flex flex-col justify-start items-start w-full lg:w-10/12">
-					<p className="text-lg lg:text-xl text-colorFive font-bold flex justify-center text-center font-monoTwo opacity-90">
+					<p className="text-lg lg:text-xl text-colorOne font-bold flex justify-center text-center font-monoTwo opacity-90">
 						Name
 					</p>
 					<Field
@@ -72,7 +72,7 @@ const Contact = () => {
 						id="user_name"
 						name="user_name"
 					/>
-					<p className="text-lg lg:text-xl text-colorFive font-bold flex justify-center text-center font-monoTwo opacity-90">
+					<p className="text-lg lg:text-xl text-colorOne font-bold flex justify-center text-center font-monoTwo opacity-90">
 						Email
 					</p>
 					<Field
@@ -86,7 +86,7 @@ const Contact = () => {
 						name="user_email"
 						component="div"
 					/>
-					<p className="text-lg lg:text-xl text-colorFive font-bold flex justify-center text-center font-monoTwo">
+					<p className="text-lg lg:text-xl text-colorOne font-bold flex justify-center text-center font-monoTwo">
 						Message
 					</p>
 					<Field
@@ -97,7 +97,7 @@ const Contact = () => {
 						rows="3"
 					/>
 					<button
-						className="flex justify-center items-center mx-auto px-6 py-1 mt-1 bg-colorTwo font-racing text-colorFive font-medium border border-colorFive rounded-xl hover:bg-colorTwo hover:text-colorFive hover:border-2 hover:border-solid hover:border-colorFour"
+						className="flex justify-center items-center mx-auto px-6 py-1 mt-1 bg-colorFour font-racing text-colorThree font-medium border border-colorFive rounded-xl hover:bg-colorTwo hover:text-colorFive hover:border-2 hover:border-solid hover:border-colorFour"
 						type="submit"
 					>
 						{loading ? "Sending..." : "Send"}
@@ -117,7 +117,7 @@ const Contact = () => {
 				initial={{ opacity: 0, y: -100 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				transition={{ duration: 2, ease: "easeOut", delay: 0.2 }}
-				className="pt-16 lg:pt-20 text-lg lg:text-2xl text-colorFive font-bold flex justify-center text-center font-monoTwo"
+				className="pt-16 lg:pt-20 text-lg lg:text-2xl text-colorOne font-bold flex justify-center text-center font-mono"
 			>
 				Ready for a Walk?
 				<br />
@@ -136,9 +136,9 @@ const Contact = () => {
 							<FontAwesomeIcon
 								icon={faPhone}
 								size="lg"
-								className="text-colorFive"
+								className="text-colorOne"
 							/>
-							<span className="ml-4 text-lg lg:text-xl text-colorFive tracking-wider">
+							<span className="ml-4 text-lg lg:text-xl text-colorOne tracking-wider">
 								07950981097
 							</span>
 						</div>
@@ -146,9 +146,9 @@ const Contact = () => {
 							<FontAwesomeIcon
 								icon={faEnvelope}
 								size="lg"
-								className="text-colorFive"
+								className="text-colorOne"
 							/>
-							<span className="ml-4 text-lg lg:text-xl text-colorFive tracking-wider">
+							<span className="ml-4 text-lg lg:text-xl text-colorOne tracking-wider">
 								donna.smith08@icloud.com
 							</span>
 						</div>
@@ -163,7 +163,7 @@ const Contact = () => {
 				>
 					{!formSubmitted && <ContactForm />}
 					{formSubmitted && (
-						<p className="pt-16 lg:pt-28 text-lg lg:text-xl text-colorFive font-bold flex justify-center text-center font-monoTwo">
+						<p className="pt-16 lg:pt-28 text-lg lg:text-xl text-colorOne font-bold flex justify-center text-center font-monoTwo">
 							Thanks, I'll get back to you shortly!
 						</p>
 					)}
