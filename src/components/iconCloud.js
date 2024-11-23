@@ -9,7 +9,7 @@ import {
 
 const IconCloud = () => {
 	return (
-		<div className="flex flex-row justify-between items-center py-8 w-full px-4 md:px-20 bg-[#f2f2f2]">
+		<div className="flex flex-row justify-between items-center py-8 w-full px-4 md:px-20 bg-[#f2f2f2] border-b-4 border-t-4 border-colorFour">
 			<motion.a
 				id="walking"
 				className="flex flex-col items-center text-center"
@@ -20,9 +20,9 @@ const IconCloud = () => {
 				<FontAwesomeIcon
 					icon={faPaw}
 					size="2x"
-					className="mb-2 text-colorOne"
+					className="mb-2 text-colorTwo"
 				/>
-				<span className="text-lg font-satisfy font-semibold text-colorOne">
+				<span className="text-lg font-fredoka font-semibold text-colorTwo">
 					Dog walking service
 				</span>
 			</motion.a>
@@ -37,9 +37,9 @@ const IconCloud = () => {
 				<FontAwesomeIcon
 					icon={faCloudSunRain}
 					size="2x"
-					className="mb-2 text-colorOne"
+					className="mb-2 text-colorTwo"
 				/>
-				<span className="text-lg font-satisfy font-semibold text-colorOne">
+				<span className="text-lg font-fredoka font-semibold text-colorTwo">
 					Any weather
 				</span>
 			</motion.a>
@@ -54,9 +54,9 @@ const IconCloud = () => {
 				<FontAwesomeIcon
 					icon={faShieldDog}
 					size="2x"
-					className="mb-2 text-colorOne"
+					className="mb-2 text-colorTwo"
 				/>
-				<span className="text-lg font-satisfy font-semibold text-colorOne">
+				<span className="text-lg font-fredoka font-semibold text-colorTwo">
 					First aid certified
 				</span>
 			</motion.a>

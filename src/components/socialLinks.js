@@ -8,14 +8,14 @@ const SocialLinks = () => {
 			<a
 				id="facebook"
 				href="https://www.facebook.com/profile.php?id=100002920786337"
-				className="mx-3 inline-block text-lg text-colorOne hover:text-[#2cc9ff]"
+				className="mx-3 inline-block text-lg text-colorTwo hover:text-colorThree"
 			>
 				<FontAwesomeIcon icon={faFacebook} size="2x" />
 			</a>
 			<a
 				id="instagram"
 				href="https://www.instagram.com/skies009/"
-				className="mx-3 inline-block text-lg text-colorOne hover:text-[#2cc9ff]"
+				className="mx-3 inline-block text-lg text-colorTwo hover:text-colorThree"
 			>
 				<FontAwesomeIcon icon={faInstagram} size="2x" />
 			</a>

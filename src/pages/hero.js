@@ -10,7 +10,7 @@ const Hero = () => {
 				animate={{ opacity: 1 }}
 				transition={{ duration: 1, delay: 0.5 }}
 			>
-				<span className="font-satisfy text-3xl md:text-6xl m-1 text-colorOne md:text-colorThree">
+				<span className="font-gloria text-5xl md:text-6xl m-1 text-colorTwo">
 					Happy Trails
 				</span>
 			</motion.p>
@@ -21,7 +21,7 @@ const Hero = () => {
 		return (
 			<Button
 				text="Contact"
-				className="font-satisfy px-6 py-2 bg-colorTwo text-colorThree border border-colorTwo rounded-xl tracking-wider font-semibold lg:overflow-hidden"
+				className="font-fredoka px-6 py-2 bg-colorOne text-colorFour border-2 border-colorFour rounded-xl tracking-wider font-semibold lg:overflow-hidden shadow-[0_10px_20px_rgba(0,0,0,0.25),0_6px_6px_rgba(0,0,0,0.22)]"
 				active={true}
 				action={"contact"}
 			/>
@@ -31,37 +31,34 @@ const Hero = () => {
 	return (
 		<>
 			<div
-				className="w-screen overflow-hidden h-[50vh] md:h-[85vh] bg-cover bg-center mt-8"
-				style={{
-					backgroundImage: "url(../../assets/images/heroBg1.jpg)",
-				}}
+				className="w-screen h-[70vh] md:h-[85vh] flex flex-col md:flex-row-reverse items-center mt-8"
 				id="hero"
 			>
-				{/*Desktop*/}
-				<motion.div
-					className="relative hidden md:flex flex-col justify-center items-start md:ml-12 lg:ml-16 pt-56 lg:pt-40 w-full z-30"
-					initial={{ opacity: 0, x: -200 }}
-					animate={{ opacity: 1, x: 0 }}
-					transition={{ duration: 1 }}
-				>
-					{renderText()}
+				{/* Image Section */}
 
-					<div className="my-6 flex flex-row">{renderButton()}</div>
-				</motion.div>
-			</div>
-			{/*Mobile*/}
-			<motion.div
-				className="relative flex flex-col justify-center items-center md:hidden w-full py-8 z-30"
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1 }}
-				transition={{ duration: 1, delay: 0.5 }}
-			>
-				{renderText()}
-
-				<div className="my-6 flex flex-row justify-center">
-					{renderButton()}
+				<div className="w-full md:w-1/2 h-[40vh] md:h-full flex items-start md:items-center justify-center">
+					<img
+						src="../../assets/images/walking.jpg"
+						alt="Hero Background"
+						className="flex w-full md:max-w-[80%] max-h-[80%] object-cover min-h-[15rem] md:object-contain border-b-4 border-colorTwo md:border-2 md:border-colorTwo md:rounded-xl md:shadow-[0_10px_20px_rgba(0,0,0,0.25),0_6px_6px_rgba(0,0,0,0.22)]"
+					/>
 				</div>
-			</motion.div>
+
+				{/* Text and Button Section */}
+				<div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start px-6 md:pl-12 lg:pl-16">
+					<motion.div
+						className="text-center md:text-left"
+						initial={{ opacity: 0, x: -200 }}
+						animate={{ opacity: 1, x: 0 }}
+						transition={{ duration: 1 }}
+					>
+						{renderText()}
+						<div className="my-6 flex flex-row justify-center md:justify-start">
+							{renderButton()}
+						</div>
+					</motion.div>
+				</div>
+			</div>
 		</>
 	);
 };

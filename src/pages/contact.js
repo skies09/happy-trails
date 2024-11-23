@@ -63,41 +63,41 @@ const Contact = () => {
 				onSubmit={handleSubmit}
 			>
 				<Form className="flex flex-col justify-start items-start w-full lg:w-10/12">
-					<p className="text-lg lg:text-xl text-colorOne font-bold flex justify-center text-center font-monoTwo opacity-90">
+					<p className="ml-4 lg:ml-0 text-lg lg:text-xl text-colorTwo font-bold flex justify-center text-center font-comforta opacity-90">
 						Name
 					</p>
 					<Field
-						className="w-full h-8 z-10 rounded-xl my-2 lg:my-4 pl-2 font-monoTwo"
+						className="w-11/12 mx-auto lg:w-full h-8 z-10 rounded-xl my-2 lg:my-4 pl-2 font-comforta"
 						type="text"
 						id="user_name"
 						name="user_name"
 					/>
-					<p className="text-lg lg:text-xl text-colorOne font-bold flex justify-center text-center font-monoTwo opacity-90">
+					<p className="ml-4 lg:ml-0 text-lg lg:text-xl text-colorTwo font-bold flex justify-center text-center font-comforta opacity-90">
 						Email
 					</p>
 					<Field
-						className="w-full h-8 z-10 rounded-xl my-2 lg:my-4 pl-2 font-monoTwo"
+						className="w-11/12 mx-auto lg:w-full h-8 z-10 rounded-xl my-2 lg:my-4 pl-2 font-comforta"
 						type="email"
 						id="user_email"
 						name="user_email"
 					/>
 					<ErrorMessage
-						className="text-sm text-colorOne font-bold flex justify-center text-center font-monoTwo opacity-90 -mt-2"
+						className="ml-4 lg:ml-0 text-sm text-colorTwo font-bold flex justify-center text-center font-comforta opacity-90 -mt-2"
 						name="user_email"
 						component="div"
 					/>
-					<p className="text-lg lg:text-xl text-colorOne font-bold flex justify-center text-center font-monoTwo">
+					<p className="ml-4 lg:ml-0 text-lg lg:text-xl text-colorTwo font-bold flex justify-center text-center font-comforta">
 						Message
 					</p>
 					<Field
 						as="textarea"
-						className="w-full lg:h-24 z-10 rounded-xl my-2 lg:my-4 pl-2 pt-2 font-monoTwo"
+						className="w-11/12 mx-auto lg:w-full lg:h-24 z-10 rounded-xl my-2 lg:my-4 pl-2 pt-2 font-comforta"
 						id="message"
 						name="message"
 						rows="3"
 					/>
 					<button
-						className="flex justify-center items-center mx-auto px-6 py-1 mt-1 bg-colorFour font-racing text-colorThree font-medium border border-colorFive rounded-xl hover:bg-colorTwo hover:text-colorFive hover:border-2 hover:border-solid hover:border-colorFour"
+						className="flex justify-center items-center mx-auto px-6 py-1 mt-1 bg-colorTwo font-fredoka text-colorFive font-medium border border-colorTwo rounded-xl hover:bg-colorTwo hover:text-colorFive hover:border-2 hover:border-solid hover:border-colorFour"
 						type="submit"
 					>
 						{loading ? "Sending..." : "Send"}
@@ -109,7 +109,7 @@ const Contact = () => {
 
 	return (
 		<div
-			className="w-screen overflow-hidden bg-colorThree pb-6 lg:pb-12"
+			className="w-screen h-[90vh] overflow-hidden bg-colorFive pb-6 lg:pb-12"
 			ref={containerRef}
 			id="contact"
 		>
@@ -117,16 +117,16 @@ const Contact = () => {
 				initial={{ opacity: 0, y: -100 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				transition={{ duration: 2, ease: "easeOut", delay: 0.2 }}
-				className="pt-16 lg:pt-20 text-lg lg:text-2xl text-colorOne font-bold flex justify-center text-center font-mono"
+				className="pt-16 lg:pt-20 text-lg lg:text-2xl text-colorTwo font-bold flex justify-center text-center font-gloria"
 			>
 				Ready for a Walk?
 				<br />
 				Get in touch!
 			</motion.div>
 
-			<div className="pt-2 lg:pt-0 flex flex-col lg:flex-row justify-center items-center w-full lg:w-4/5 mx-auto">
+			<div className="pt-2 lg:pt-0 flex flex-col-reverse lg:flex-row justify-center items-center w-full lg:w-4/5 mx-auto">
 				<motion.div
-					className="w-1/2 flex flex-col justify-center items-center h-60 lg:h-[30rem] pt-16 lg:pt-0"
+					className="w-1/2 flex flex-col justify-center items-center h-auto lg:h-[30rem] pt-8 lg:pt-0"
 					initial={{ opacity: 0, x: -100 }}
 					whileInView={{ opacity: 1, x: 0 }}
 					transition={{ duration: 2, ease: "easeOut", delay: 0.2 }}
@@ -136,19 +136,19 @@ const Contact = () => {
 							<FontAwesomeIcon
 								icon={faPhone}
 								size="lg"
-								className="text-colorOne"
+								className="text-colorTwo"
 							/>
-							<span className="ml-4 text-lg lg:text-xl text-colorOne tracking-wider">
+							<span className="ml-4 text-lg lg:text-xl text-colorTwo tracking-wider font-comforta">
 								07950981097
 							</span>
 						</div>
-						<div className="flex flex-row items-center mb-6">
+						<div className="flex flex-row items-center">
 							<FontAwesomeIcon
 								icon={faEnvelope}
 								size="lg"
-								className="text-colorOne"
+								className="text-colorTwo"
 							/>
-							<span className="ml-4 text-lg lg:text-xl text-colorOne tracking-wider">
+							<span className="ml-4 text-lg lg:text-xl text-colorTwo tracking-wider font-comforta">
 								donna.smith08@icloud.com
 							</span>
 						</div>
@@ -156,14 +156,14 @@ const Contact = () => {
 					<SocialLinks />
 				</motion.div>
 				<motion.div
-					className="w-10/12 lg:w-1/2 flex justify-center items-start bg-colorThree h-80 lg:h-96"
+					className="w-full lg:w-1/2 flex justify-center items-start bg-colorOne py-6 rounded-xl h-auto"
 					initial={{ opacity: 0, x: 100 }}
 					whileInView={{ opacity: 1, x: 0 }}
 					transition={{ duration: 2, ease: "easeOut", delay: 0.2 }}
 				>
 					{!formSubmitted && <ContactForm />}
 					{formSubmitted && (
-						<p className="pt-16 lg:pt-28 text-lg lg:text-xl text-colorOne font-bold flex justify-center text-center font-monoTwo">
+						<p className="pt-16 lg:pt-28 text-lg lg:text-xl text-colorTwo font-bold flex justify-center text-center font-monoTwo">
 							Thanks, I'll get back to you shortly!
 						</p>
 					)}

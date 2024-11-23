@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const Button = ({ text, className, active = true, action })  =>{
+const Button = ({ text, className, active = true, action }) => {
 	const handleClick = (page) => {
 		window.location.href = "#" + page;
 	};
@@ -12,9 +12,9 @@ const Button = ({ text, className, active = true, action })  =>{
 					whileTap={{ scale: 0.9 }}
 					whileHover={{
 						scale: 1.1,
-						backgroundColor: "#003459",
-						color: "#F9F9F9",
-						border: "solid #007EA7 2px",
+						backgroundColor: "#B3DDF2",
+						color: "#5C4033",
+						border: "solid #5C4033 3px",
 					}}
 					transition={{ bounceDamping: 10, bounceStiffness: 600 }}
 					className={className}
@@ -25,7 +25,6 @@ const Button = ({ text, className, active = true, action })  =>{
 			)}
 		</>
 	);
-}
-
+};
 
 export default Button;
