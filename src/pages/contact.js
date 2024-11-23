@@ -62,36 +62,36 @@ const Contact = () => {
 				validationSchema={validationSchema}
 				onSubmit={handleSubmit}
 			>
-				<Form className="flex flex-col justify-start items-start w-full lg:w-10/12">
-					<p className="ml-4 lg:ml-0 text-lg lg:text-xl text-colorTwo font-bold flex justify-center text-center font-comforta opacity-90">
+				<Form className="flex flex-col justify-start items-start w-full md:w-10/12">
+					<p className="ml-4 md:ml-0 text-lg md:text-xl text-colorTwo font-bold flex justify-center text-center font-comforta opacity-90">
 						Name
 					</p>
 					<Field
-						className="w-11/12 mx-auto lg:w-full h-8 z-10 rounded-xl my-2 lg:my-4 pl-2 font-comforta"
+						className="w-11/12 mx-auto md:w-full h-8 z-10 rounded-xl my-2 md:my-4 pl-2 font-comforta"
 						type="text"
 						id="user_name"
 						name="user_name"
 					/>
-					<p className="ml-4 lg:ml-0 text-lg lg:text-xl text-colorTwo font-bold flex justify-center text-center font-comforta opacity-90">
+					<p className="ml-4 md:ml-0 text-lg md:text-xl text-colorTwo font-bold flex justify-center text-center font-comforta opacity-90">
 						Email
 					</p>
 					<Field
-						className="w-11/12 mx-auto lg:w-full h-8 z-10 rounded-xl my-2 lg:my-4 pl-2 font-comforta"
+						className="w-11/12 mx-auto md:w-full h-8 z-10 rounded-xl my-2 md:my-4 pl-2 font-comforta"
 						type="email"
 						id="user_email"
 						name="user_email"
 					/>
 					<ErrorMessage
-						className="ml-4 lg:ml-0 text-sm text-colorTwo font-bold flex justify-center text-center font-comforta opacity-90 -mt-2"
+						className="ml-4 md:ml-0 text-sm text-colorTwo font-bold flex justify-center text-center font-comforta opacity-90 -mt-2"
 						name="user_email"
 						component="div"
 					/>
-					<p className="ml-4 lg:ml-0 text-lg lg:text-xl text-colorTwo font-bold flex justify-center text-center font-comforta">
+					<p className="ml-4 md:ml-0 text-lg md:text-xl text-colorTwo font-bold flex justify-center text-center font-comforta">
 						Message
 					</p>
 					<Field
 						as="textarea"
-						className="w-11/12 mx-auto lg:w-full lg:h-24 z-10 rounded-xl my-2 lg:my-4 pl-2 pt-2 font-comforta"
+						className="w-11/12 mx-auto md:w-full md:h-24 z-10 rounded-xl my-2 md:my-4 pl-2 pt-2 font-comforta"
 						id="message"
 						name="message"
 						rows="3"
@@ -109,7 +109,7 @@ const Contact = () => {
 
 	return (
 		<div
-			className="w-screen h-[90vh] overflow-hidden bg-colorFive pb-6 lg:pb-12"
+			className="w-screen h-screen overflow-hidden bg-colorFive pb-6 md:pb-12"
 			ref={containerRef}
 			id="contact"
 		>
@@ -117,16 +117,16 @@ const Contact = () => {
 				initial={{ opacity: 0, y: -100 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				transition={{ duration: 2, ease: "easeOut", delay: 0.2 }}
-				className="pt-16 lg:pt-20 text-lg lg:text-2xl text-colorTwo font-bold flex justify-center text-center font-gloria"
+				className="pt-16 md:pt-20 text-lg md:text-2xl text-colorTwo font-bold flex justify-center text-center font-gloria"
 			>
 				Ready for a Walk?
 				<br />
 				Get in touch!
 			</motion.div>
 
-			<div className="pt-2 lg:pt-0 flex flex-col-reverse lg:flex-row justify-center items-center w-full lg:w-4/5 mx-auto">
+			<div className="pt-2 md:pt-0 flex flex-col-reverse md:flex-row justify-center items-center w-full md:w-full lg:4/5 xl:4/6 mx-auto">
 				<motion.div
-					className="w-1/2 flex flex-col justify-center items-center h-auto lg:h-[30rem] pt-8 lg:pt-0"
+					className="w-1/2 flex flex-col justify-center items-center h-auto md:h-[30rem] pt-8 md:pt-0"
 					initial={{ opacity: 0, x: -100 }}
 					whileInView={{ opacity: 1, x: 0 }}
 					transition={{ duration: 2, ease: "easeOut", delay: 0.2 }}
@@ -138,7 +138,7 @@ const Contact = () => {
 								size="lg"
 								className="text-colorTwo"
 							/>
-							<span className="ml-4 text-lg lg:text-xl text-colorTwo tracking-wider font-comforta">
+							<span className="ml-4 text-lg md:text-xl text-colorTwo tracking-wider font-comforta">
 								07950981097
 							</span>
 						</div>
@@ -148,7 +148,7 @@ const Contact = () => {
 								size="lg"
 								className="text-colorTwo"
 							/>
-							<span className="ml-4 text-lg lg:text-xl text-colorTwo tracking-wider font-comforta">
+							<span className="ml-4 text-lg md:text-xl text-colorTwo tracking-wider font-comforta">
 								donna.smith08@icloud.com
 							</span>
 						</div>
@@ -156,14 +156,14 @@ const Contact = () => {
 					<SocialLinks />
 				</motion.div>
 				<motion.div
-					className="w-full lg:w-1/2 flex justify-center items-start bg-colorOne py-6 rounded-xl h-auto"
+					className="w-full md:w-1/2 lg:w-1/3 flex justify-center items-start bg-colorOne py-6 rounded-xl h-auto"
 					initial={{ opacity: 0, x: 100 }}
 					whileInView={{ opacity: 1, x: 0 }}
 					transition={{ duration: 2, ease: "easeOut", delay: 0.2 }}
 				>
 					{!formSubmitted && <ContactForm />}
 					{formSubmitted && (
-						<p className="pt-16 lg:pt-28 text-lg lg:text-xl text-colorTwo font-bold flex justify-center text-center font-monoTwo">
+						<p className="pt-16 md:pt-28 text-lg md:text-xl text-colorTwo font-bold flex justify-center text-center font-monoTwo">
 							Thanks, I'll get back to you shortly!
 						</p>
 					)}

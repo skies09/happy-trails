@@ -22,7 +22,7 @@ const IconCloud = () => {
 					size="2x"
 					className="mb-2 text-colorTwo"
 				/>
-				<span className="text-lg font-fredoka font-semibold text-colorTwo">
+				<span className="text-md md:text-lg font-fredoka font-semibold text-colorTwo">
 					Dog walking service
 				</span>
 			</motion.a>
@@ -39,7 +39,7 @@ const IconCloud = () => {
 					size="2x"
 					className="mb-2 text-colorTwo"
 				/>
-				<span className="text-lg font-fredoka font-semibold text-colorTwo">
+				<span className="text-md md:text-lg font-fredoka font-semibold text-colorTwo">
 					Any weather
 				</span>
 			</motion.a>
@@ -56,7 +56,7 @@ const IconCloud = () => {
 					size="2x"
 					className="mb-2 text-colorTwo"
 				/>
-				<span className="text-lg font-fredoka font-semibold text-colorTwo">
+				<span className="text-md md:text-lg font-fredoka font-semibold text-colorTwo">
 					First aid certified
 				</span>
 			</motion.a>

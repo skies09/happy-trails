@@ -1,19 +1,38 @@
 import { motion } from "framer-motion";
 import Button from "../components/button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPaw } from "@fortawesome/free-solid-svg-icons";
 
 const Hero = () => {
 	const renderText = () => {
 		return (
-			<motion.p
-				className=""
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1 }}
-				transition={{ duration: 1, delay: 0.5 }}
-			>
-				<span className="font-gloria text-5xl md:text-6xl m-1 text-colorTwo">
-					Happy Trails
-				</span>
-			</motion.p>
+			<div>
+				<motion.p
+					className="mb-6"
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					transition={{ duration: 1, delay: 0.5 }}
+				>
+					<span className="font-gloria text-4xl md:text-7xl m-1 text-colorTwo">
+						Happy Trails
+						<FontAwesomeIcon
+							icon={faPaw}
+							size="xs"
+							className="text-colorTwo ml-3"
+						/>
+					</span>
+				</motion.p>
+				<motion.p
+					className="mt-6"
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					transition={{ duration: 1, delay: 0.5 }}
+				>
+					<span className="font-fredoka text-xl md:text-3xl m-1 text-colorFour">
+						Dog Walking Service
+					</span>
+				</motion.p>
+			</div>
 		);
 	};
 
