@@ -51,7 +51,7 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
 							}`}
 						></span>
 						<span
-							className={`block w-full h-1 bg-colorTwo rounded-3xl transition-all duration-1000 ease-in-out ${
+							className={`block w-10/12 mx-auto h-1 bg-colorTwo rounded-3xl transition-all duration-1000 ease-in-out ${
 								menuOpen ? "opacity-0" : ""
 							}`}
 						></span>
