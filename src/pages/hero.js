@@ -8,7 +8,7 @@ const Hero = () => {
 		return (
 			<div>
 				<motion.p
-					className="mb-6"
+					className="mb-6 lg:ml-8"
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
 					transition={{ duration: 1, delay: 0.5 }}
@@ -23,7 +23,7 @@ const Hero = () => {
 					</span>
 				</motion.p>
 				<motion.p
-					className="mt-6"
+					className="mt-6 lg:ml-8"
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
 					transition={{ duration: 1, delay: 0.5 }}
@@ -45,7 +45,7 @@ const Hero = () => {
 			>
 				<Button
 					text="Contact"
-					className="font-fredoka px-6 py-2 bg-colorOne text-colorFour border-2 border-colorFour rounded-xl tracking-wider font-semibold lg:overflow-hidden shadow-[0_10px_20px_rgba(0,0,0,0.25),0_6px_6px_rgba(0,0,0,0.22)]"
+					className="lg:ml-8 font-fredoka px-6 py-2 bg-colorOne text-colorFour border-2 border-colorFour rounded-xl tracking-wider font-semibold lg:overflow-hidden shadow-[0_10px_20px_rgba(0,0,0,0.25),0_6px_6px_rgba(0,0,0,0.22)]"
 					active={true}
 					action={"contact"}
 				/>
@@ -56,7 +56,7 @@ const Hero = () => {
 	return (
 		<>
 			<div
-				className="w-screen h-[70vh] md:h-[85vh] flex flex-col md:flex-row-reverse items-center mt-8"
+				className="w-screen h-[70vh] md:h-[80vh] flex flex-col md:flex-row-reverse items-center mt-20"
 				id="hero"
 			>
 				{/* Image Section */}
@@ -65,12 +65,12 @@ const Hero = () => {
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
 					transition={{ duration: 1, delay: 0.5 }}
-					className="w-full md:w-1/2 h-[40vh] md:h-full flex items-start md:items-center justify-center"
+					className="w-full md:w-1/2 h-[40vh] md:h-full flex items-start md:items-center justify-center mx-4 lg:mx-0"
 				>
 					<img
 						src="../../assets/images/walking.jpg"
 						alt="Hero Background"
-						className="flex w-full md:max-w-[80%] max-h-[80%] object-cover min-h-[15rem] md:object-contain border-b-4 border-colorTwo md:border-2 md:border-colorTwo md:rounded-xl md:shadow-[0_10px_20px_rgba(0,0,0,0.25),0_6px_6px_rgba(0,0,0,0.22)]"
+						className="flex w-full max-h-[16rem] md:max-h-none lg:max-w-[75%] lg:max-h-[75%] object-cover min-h-[15rem] border-b-4 border-colorTwo md:border-2 md:border-colorTwo md:rounded-xl md:shadow-[0_10px_20px_rgba(0,0,0,0.25),0_6px_6px_rgba(0,0,0,0.22)]"
 					/>
 				</motion.div>
 
