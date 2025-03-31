@@ -1,4 +1,5 @@
-import { faPaw } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
+import { faPaw, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Navbar = ({ menuOpen, setMenuOpen }) => {
@@ -40,28 +41,35 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
 				</div>
 				<div className="mr-4 mt-2 w-8 h-8 flex items-center md:hidden">
 					<div
-						className="w-8 h-6 flex flex-col justify-between cursor-pointer"
+						className="relative w-8 h-6 flex flex-col justify-between cursor-pointer"
 						onClick={() => setMenuOpen(!menuOpen)}
 					>
-						<span
-							className={`block w-full h-1 bg-colorTwo rounded-3xl transition-all duration-1000 ease-in-out origin-center ${
-								menuOpen
-									? "transform rotate-45 translate-y-2.5"
-									: ""
-							}`}
-						></span>
-						<span
-							className={`block w-10/12 mx-auto h-1 bg-colorTwo rounded-3xl transition-all duration-1000 ease-in-out ${
-								menuOpen ? "opacity-0" : ""
-							}`}
-						></span>
-						<span
-							className={`block w-full h-1 bg-colorTwo rounded-3xl transition-all duration-1000 ease-in-out origin-center ${
-								menuOpen
-									? "transform -rotate-45 -translate-y-2.5"
-									: ""
-							}`}
-						></span>
+						<motion.div
+							initial={{ opacity: 0 }}
+							animate={{ opacity: menuOpen ? 0 : 1 }}
+							exit={{ opacity: 0 }}
+							transition={{ duration: 0.3 }}
+							className="absolute top-0 left-0"
+						>
+							<FontAwesomeIcon
+								icon={faPaw}
+								size="2x"
+								className="mb-2 text-colorTwo"
+							/>
+						</motion.div>
+						<motion.div
+							initial={{ opacity: 0 }}
+							animate={{ opacity: menuOpen ? 1 : 0 }}
+							exit={{ opacity: 0 }}
+							transition={{ duration: 0.3 }}
+							className="absolute top-0 left-[0.25rem]"
+						>
+							<FontAwesomeIcon
+								icon={faXmark}
+								size="2x"
+								className="mb-2 text-colorTwo"
+							/>
+						</motion.div>
 					</div>
 				</div>
 			</div>
